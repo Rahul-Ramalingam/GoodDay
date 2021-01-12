@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Since we have only ine child i.e. recycler view we can use
+FrameLayout instead of ConstraintLayout
+Steps to create a recycler view:
+    1.prepare layout
+    2.add a adapter(prepares data to be shown on recycler view)
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--RecyclerView supports multiple layouts so we added a linear layout view -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:scrollbars="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</FrameLayout>
